@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component, Fragment } from 'react';
+import { withMobileContext } from "./modules/MobileContext";
+import ReactGA from "react-ga";
+import Navbar from "./components/screens/navbar";
+import NavbarMobile from "./components/screens/navbarMobile";
+import Home from "./components/screens/home";
+import HowItWorks from "./components/screens/fonctionnement";
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+  componentDidMount = () => {
+    this.initializeReactGA();
+  };
+  initializeReactGA = () => {
+    ReactGA.initialize("UA-120801966-2");
+    ReactGA.pageview("/");
+  };
+  renderNavbar = () => {
+    const { isSmallScreen, isMobile } = this.props;
+    if (isSmallScreen || isMobile) return <NavbarMobile isMobile={isMobile} isSmallScreen={isSmallScreen}/>;
+    return <Navbar />;
+  };
+  render() {
+    const { isMobile, isSmallScreen } = this.props;
+    return (
+      <Fragment>
+        {this.renderNavbar()}
+        <Home isMobile={isMobile} isSmallScreen={isSmallScreen} />
+        <HowItWorks isMobile={isMobile} isSmallScreen={isSmallScreen} />
+        
+      </Fragment>
+    );
+  }
 }
 
-export default App;
+export default withMobileContext(App);

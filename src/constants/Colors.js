@@ -1,0 +1,13 @@
+export const white = 'rgb(255,255,255)';
+export const whiteOpacity = 'rgba(255,255,255, 0.14)';
+export const black = 'rgb(000,000,000)';
+export const grey = 'rgb(112,112,112)';
+export const lightGrey = 'rgb(245,245,245)';
+export const darkGrey = 'rgb(51,51,51)';
+export const darkGreyOpacity = 'rgba(51,51,51,0.5)';
+export const darkGreyOpacityBis = 'rgba(51,51,51,0.05)';
+export const red = 'red';
+export const blue = '#3396AA';
+export const border = '#00809A';
+export const underline = '#64CAC3';
+export const green = '#035c00';
