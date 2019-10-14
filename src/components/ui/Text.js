@@ -33,12 +33,15 @@ class Text extends Component {
       children,
       marginRightPx,
       bolder,
+      bottom,
+      align,
     } = this.props;
     return (
       <TextStyled
         height={height}
         position={position}
         top={top}
+        bottom={bottom}
         left={left}
         zIndex={zIndex}
         textColor={textColor}
@@ -59,6 +62,7 @@ class Text extends Component {
         marginRightPx={marginRightPx}
         bolder={bolder}
         backgroundColor={backgroundColor}
+        align={align}
       >
         {children}
       </TextStyled>
@@ -75,6 +79,16 @@ const backgroundColor = props => {
     return null;
   }
 };
+
+const align = props => {
+  if (props.align !== null) {
+    return css`
+      align-self: ${props.align};
+    `;
+  } else {
+    return null;
+  }
+}
 
 const height = props => {
   if (props.height != null) {
@@ -110,6 +124,16 @@ const top = props => {
   if (props.top != null) {
     return css`
       top: ${props.top}%;
+    `;
+  } else {
+    return null;
+  }
+};
+
+const bottom = props => {
+  if (props.bottom != null) {
+    return css`
+      bottom: ${props.bottom}%;
     `;
   } else {
     return null;
@@ -321,6 +345,8 @@ const TextStyled = styled("p")`
   ${marginRightPx};
   ${bolder};
   ${backgroundColor};
+  ${bottom};
+  ${align};
   vertical-align: middle;
 `;
 

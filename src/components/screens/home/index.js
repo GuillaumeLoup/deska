@@ -32,11 +32,13 @@ class Home extends Component {
           
         >
           <ResponsiveWrapper
-          width={100}
+            width={100}
             direction="row"
             justify="center"
             marginTop={isMobile || isSmallScreen ? "80" : "80"}
-          > {
+            position="relative"
+          > 
+          {
             isSmallScreen ? 
             <Image
               src={backsmall}
@@ -50,14 +52,12 @@ class Home extends Component {
               height={isMobile ? "350" : null}
             />
           }
-          <ResponsiveWrapper
-            backgroundColor={Colors.whiteOpacity}
-          >
+        
             
             <Text
               width={isMobile ? 80 : isSmallScreen ? 60 : 40}
               position='absolute'
-              top={isMobile ? 30 : isSmallScreen ? 32 : 50}
+              bottom={33}
               font={{size:isMobile ? 1.2 : isSmallScreen ? 2 : 2.6, weight: FontWeight.Bold}}
               center
               
@@ -94,7 +94,7 @@ class Home extends Component {
               Abordable Sans bouger. Sans engagement.
               </HighlightText>
             </Text>
-            </ResponsiveWrapper>
+            
            
           </ResponsiveWrapper>
           
@@ -135,17 +135,6 @@ const height = props => {
   }
 }
 
-const font = props => {
-  if (props.font == null) {
-    return css`
-      font: ${generate_font({})};
-    `;
-  }
-
-  return css`
-    font: ${generate_font(props.font)};
-  `;
-};
 const marginTop = props => {
   if (props.marginTop !== null) {
     return css`
@@ -160,16 +149,6 @@ const marginBottom = props => {
   if (props.marginBottom !== null) {
     return css`
       margin-bottom: ${props.marginBottom}px;
-    `;
-  } else {
-    return null;
-  }
-}
-
-const paddingLeft = props => {
-  if (props.paddingLeft !== null) {
-    return css`
-      padding-left: ${props.paddingLeft}%;
     `;
   } else {
     return null;

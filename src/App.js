@@ -5,6 +5,7 @@ import Navbar from "./components/screens/navbar";
 import NavbarMobile from "./components/screens/navbarMobile";
 import Home from "./components/screens/home";
 import HowItWorks from "./components/screens/fonctionnement";
+import Questions from "./components/screens/questions";
 import './App.css';
 
 
@@ -28,6 +29,7 @@ class App extends Component {
         {this.renderNavbar()}
         <Home isMobile={isMobile} isSmallScreen={isSmallScreen} />
         <HowItWorks isMobile={isMobile} isSmallScreen={isSmallScreen} />
+        <Questions isMobile={isMobile} isSmallScreen={isSmallScreen} />
         
       </Fragment>
     );

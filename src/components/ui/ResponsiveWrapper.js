@@ -38,6 +38,7 @@ const ResponsiveWrapper = (props) => {
       marginTop={props.marginTop}
       marginBottom={props.marginBottom}
       marginRight={props.marginRight}
+      marginLeft={props.marginLeft}
       boxShadow={props.boxShadow}
       transform={props.transform}
       overflowX={props.overflowX}
@@ -384,6 +385,16 @@ const marginRight = props => {
   }
 };
 
+const marginLeft = props => {
+  if (props.marginLeft !== null) {
+    return css`
+      margin-left: ${props.marginLeft}%;
+    `;
+  } else {
+    return null;
+  }
+};
+
 const marginAuto = props => {
   if (props.marginAuto) {
     return css`
@@ -489,6 +500,7 @@ const StyledResponsiveWrapper = styled("div")`
   ${wordWrap};
   ${marginTopPercent};
   ${heightPercent};
+  ${marginLeft};
 
 `;
 

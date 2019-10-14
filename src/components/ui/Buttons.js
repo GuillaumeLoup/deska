@@ -65,14 +65,16 @@ const alignSelf = props => {
 };
 
 const ButtonStyled = styled("button")`
-  min-width: 180px;
-  min-height: 40px;
-  border: 1px solid ${Colors.black};
-  padding: 10px 10px;
-  background-color: transparent;
+  min-width: 120px;
+  min-height: 20px;
+  padding: 5px 5px;
+  border-radius: 20px;
+  background-color: #8ea638;
+  color: white;
   cursor: pointer;
   &:hover {
-    transform: translateX(10%);
+    color: #8ea638;
+    background-color: #e6e6e6;
   }
   transition: all 0.2s ease;
   margin-bottom : 0px;
