@@ -16,6 +16,7 @@ const HighlightText = (props) => {
       transform={props.transform}
       marginRight={props.marginRight}
       marginLeft={props.marginLeft}
+      marginTop={props.marginTop}
     >
       {props.children}
     </TextStyled>
@@ -26,6 +27,15 @@ const underline = props => {
   if (props.underline != null) {
     return css`
       text-decoration: underline;
+    `;
+  }
+  return null;
+};
+
+const marginTop = props => {
+  if (props.marginTop != null) {
+    return css`
+      margin-top: ${props.marginTop}px;
     `;
   }
   return null;
@@ -98,6 +108,7 @@ const TextStyled = styled("span")`
   ${underline};
   ${marginRight};
   ${marginLeft};
+  ${marginTop};
 `;
 
 export default HighlightText;

@@ -35,6 +35,7 @@ class Text extends Component {
       bolder,
       bottom,
       align,
+      paddingLeft,
     } = this.props;
     return (
       <TextStyled
@@ -63,6 +64,7 @@ class Text extends Component {
         bolder={bolder}
         backgroundColor={backgroundColor}
         align={align}
+        paddingLeft={paddingLeft}
       >
         {children}
       </TextStyled>
@@ -104,6 +106,16 @@ const padding = props => {
   if (props.padding != null) {
     return css`
       padding: ${props.padding}%;
+    `;
+  } else {
+    return null;
+  }
+};
+
+const paddingLeft = props => {
+  if (props.paddingLeft != null) {
+    return css`
+      padding-left: ${props.paddingLeft}%;
     `;
   } else {
     return null;
@@ -347,6 +359,7 @@ const TextStyled = styled("p")`
   ${backgroundColor};
   ${bottom};
   ${align};
+  ${paddingLeft};
   vertical-align: middle;
 `;
 

@@ -26,7 +26,7 @@ class Questions extends Component {
          <ScrollableAnchor id="accueil">
       <Fragment>
        <SectionWrapper
-          minHeight={isMobile ? 50 : isSmallScreen ? 60 : 90}
+          minHeight={isMobile ? 50 : isSmallScreen ? 60 : 60}
           direction="column"
           align="center"
           backgroundColor="#e6e6e6"
@@ -37,25 +37,26 @@ class Questions extends Component {
             textColor={Colors.black}
             marginTop={30}
             center
-            padding={8}
+            
           >
              Consultez les questions les plus fréquentes
             </Title>
            <ResponsiveWrapper
             width={isSmallScreen ? 100 : 75}
             heightPercent={100}
-            direction={isMobile ? "column" : "row"}
+            direction={isMobile || isSmallScreen ? "column" : "row"}
             justify="space-evenly"
+            padding={2}
             
           >
             <ResponsiveWrapper
               direction="column"
-              width={isMobile ? 90 : 30}
+              width={isMobile || isSmallScreen ? 90 : 30}
               viewportHeight={60}
               backgroundColor="white"
-              padding={isMobile ? 8 : 2}
-              marginLeft={isMobile ? 5 : null}
-              marginBottom={isMobile ? "20" : null}
+              padding={isMobile ? 8 : isSmallScreen ? 5 : 2}
+              marginLeft={isMobile || isSmallScreen ? 5 : null}
+              marginBottom={isMobile || isSmallScreen ? "20" : null}
             >
               <ResponsiveWrapper
                 position="relative"
@@ -82,7 +83,7 @@ class Questions extends Component {
               >
               <Text
               width={100}
-              font={{size:isMobile ? 1.2 : isSmallScreen ? 2 : 1.4, weight: FontWeight.Regular}}
+              font={{size:isMobile ? 1.2 : isSmallScreen ? 1.6 : 1.4, weight: FontWeight.Regular}}
               textColor={Colors.black}
               lineHeight="3"
             >
@@ -106,12 +107,12 @@ class Questions extends Component {
             </ResponsiveWrapper>
             <ResponsiveWrapper
               direction="column"
-              width={isMobile ? 90 : 30}
+              width={isMobile || isSmallScreen ? 90 : 30}
               viewportHeight={60}
               backgroundColor="white"
-              padding={isMobile ? 8 : 2}
-              marginLeft={isMobile ? 5 : null}
-              marginBottom={isMobile ? "20" : null}
+              padding={isMobile ? 8 : isSmallScreen ? 5 : 2}
+              marginLeft={isMobile || isSmallScreen  ? 5 : null}
+              marginBottom={isMobile || isSmallScreen  ? "20" : null}
             >
               <ResponsiveWrapper
                 position="relative"
@@ -138,7 +139,7 @@ class Questions extends Component {
               >
               <Text
               width={100}
-              font={{size:isMobile ? 1.2 : isSmallScreen ? 2 : 1.4, weight: FontWeight.Regular}}
+              font={{size:isMobile ? 1.2 : isSmallScreen ? 1.6 : 1.4, weight: FontWeight.Regular}}
               textColor={Colors.black}
               lineHeight="3"
             >
@@ -162,12 +163,12 @@ class Questions extends Component {
             </ResponsiveWrapper>
             <ResponsiveWrapper
               direction="column"
-              width={isMobile ? 90 : 30}
+              width={isMobile || isSmallScreen  ? 90 : 30}
               viewportHeight={60}
               backgroundColor="white"
-              padding={isMobile ? 8 : 2}
-              marginLeft={isMobile ? 5 : null}
-              marginBottom={isMobile ? "20" : null}
+              padding={isMobile ? 8 : isSmallScreen ? 5 : 2}
+              marginLeft={isMobile || isSmallScreen  ? 5 : null}
+              marginBottom={isMobile || isSmallScreen  ? "20" : null}
             >
               <ResponsiveWrapper
                 position="relative"
@@ -195,7 +196,7 @@ class Questions extends Component {
               >
               <Text
               width={100}
-              font={{size:isMobile ? 1.2 : isSmallScreen ? 2 : 1.4, weight: FontWeight.Regular}}
+              font={{size:isMobile ? 1.2 : isSmallScreen ? 1.6 : 1.4, weight: FontWeight.Regular}}
               textColor={Colors.black}
               lineHeight="3"
             >

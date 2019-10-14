@@ -6,6 +6,8 @@ import NavbarMobile from "./components/screens/navbarMobile";
 import Home from "./components/screens/home";
 import HowItWorks from "./components/screens/fonctionnement";
 import Questions from "./components/screens/questions";
+import WhyDeskalia from "./components/screens/whyDeskalia";
+import Plans from "./components/screens/plans";
 import './App.css';
 
 
@@ -30,6 +32,8 @@ class App extends Component {
         <Home isMobile={isMobile} isSmallScreen={isSmallScreen} />
         <HowItWorks isMobile={isMobile} isSmallScreen={isSmallScreen} />
         <Questions isMobile={isMobile} isSmallScreen={isSmallScreen} />
+        <WhyDeskalia isMobile={isMobile} isSmallScreen={isSmallScreen} />
+        <Plans isMobile={isMobile} isSmallScreen={isSmallScreen} />
         
       </Fragment>
     );

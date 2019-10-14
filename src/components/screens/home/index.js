@@ -29,7 +29,6 @@ class Home extends Component {
           minHeight={isMobile ? 50 : isSmallScreen ? 60 : 100}
           direction="column"
           align="center"
-          
         >
           <ResponsiveWrapper
             width={100}
