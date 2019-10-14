@@ -8,6 +8,7 @@ import HowItWorks from "./components/screens/fonctionnement";
 import Questions from "./components/screens/questions";
 import WhyDeskalia from "./components/screens/whyDeskalia";
 import Plans from "./components/screens/plans";
+import Advisor from "./components/screens/conseillers";
 import './App.css';
 
 
@@ -34,6 +35,7 @@ class App extends Component {
         <Questions isMobile={isMobile} isSmallScreen={isSmallScreen} />
         <WhyDeskalia isMobile={isMobile} isSmallScreen={isSmallScreen} />
         <Plans isMobile={isMobile} isSmallScreen={isSmallScreen} />
+        <Advisor isMobile={isMobile} isSmallScreen={isSmallScreen} />
         
       </Fragment>
     );

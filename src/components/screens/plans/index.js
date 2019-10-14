@@ -44,6 +44,7 @@ class Plans extends Component {
             <Subtitle
               font={{ weight: FontWeight.Bold, size: isMobile ? 2 : isSmallScreen ? 2 : 2.2}}
               center
+              padding={2}
             > 
               Nos plans incluent toutes les fonctionnalités principales et l’accès aux appels audio et vidéo avec nos consultants.
             </Subtitle>
@@ -52,10 +53,11 @@ class Plans extends Component {
               direction={isMobile ? "column" : "row"}
               width={100}
               viewportHeight={isMobile ? 50 : 30}
+              padding={isMobile ? null : 2}
             >
               <ResponsiveWrapper
                 position="relative"
-                width={isMobile ? 90 : isSmallScreen ? 48 : 48}
+                width={isMobile ? 90 : isSmallScreen ? 50 : 50}
                 height="150"
                 backgroundColor={Colors.white}
                 marginRight={isMobile ? null : "10"}
@@ -90,7 +92,7 @@ class Plans extends Component {
               </ResponsiveWrapper>
               <ResponsiveWrapper
                 position="relative"
-                width={isMobile ? 90 : isSmallScreen ? 48 : 48}
+                width={isMobile ? 90 : isSmallScreen ? 50 : 50}
                 height="150"
                 backgroundColor={Colors.white}
                 marginLeftPx={isMobile ? null : "10"}
