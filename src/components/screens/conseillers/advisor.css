@@ -1,0 +1,39 @@
+
+.wrap-card{
+  position: relative;
+  display: flex;
+  position: relative;
+  flex-direction:column;
+  width:100%;
+  height:100%;
+  align-items: center;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(112,112,112,0.25);
+  margin-right: 20px;
+  text-align: center;
+}
+
+.wrap-card:hover{
+  border-color: #8ea638;
+  border-width: 2px;
+  color: black;
+}
+
+.navlink{
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: black;
+}
+
+.navlink-but{
+   width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: white;
+}
+
+.navlink-but:hover{
+  color: #8ea638;
+}

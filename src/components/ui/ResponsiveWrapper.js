@@ -1,57 +1,109 @@
 //@flow
-import React from "react";
+import React, {Component} from "react";
 
 import styled from "@emotion/styled";
 import { css } from "@emotion/core";
 
-const ResponsiveWrapper = (props) => {
-  return (
+class ResponsiveWrapper extends Component  {
+       handleClick = () => {
+    this.props.handleClick && this.props.handleClick();
+  };
+  render() {
+ 
+  const {
+    borderStyle,
+    borderWidth,
+      borderColor,
+      position,
+      top,
+      left,
+      right,
+      zIndex,
+      pixelWidth,
+      width,
+      maxWidth,
+      minHeight,
+      height,
+      viewportHeight,
+      direction,
+      justify,
+      align,
+      alignSelf,
+      wrap,
+      grow,
+      backgroundColor,
+      backgroundImage,
+      backgroundPosition,
+      padding,
+      paddingTop,
+      paddingLeft,
+      paddingRight,
+      marginAuto,
+      marginTop,
+      marginBottom,
+      marginRight,
+      marginLeft,
+      boxShadow,
+      transform,
+      overflowX,
+      nowrap,
+      wordWrap,
+      marginTopPercent,
+      bottom,
+      children,
+      heightPercent,
+      marginLeftPx,
+  } = this.props;
+    return (
     <StyledResponsiveWrapper
-      borderStyle={props.borderStyle}
-      borderWidth={props.borderWidth}
-      borderColor={props.borderColor}
-      position={props.position}
-      top={props.top}
-      left={props.left}
-      right={props.right}
-      zIndex={props.zIndex}
-      pixelWidth={props.pixelWidth}
-      width={props.width}
-      maxWidth={props.maxWidth}
-      minHeight={props.minHeight}
-      height={props.height}
-      viewportHeight={props.viewportHeight}
-      direction={props.direction}
-      justify={props.justify}
-      align={props.align}
-      alignSelf={props.alignSelf}
-      wrap={props.wrap}
-      grow={props.grow}
-      backgroundColor={props.backgroundColor}
-      backgroundImage={props.backgroundImage}
-      backgroundPosition={props.backgroundPosition}
-      padding={props.padding}
-      paddingTop={props.paddingTop}
-      paddingLeft={props.paddingLeft}
-      paddingRight={props.paddingRight}
-      marginAuto={props.marginAuto}
-      marginTop={props.marginTop}
-      marginBottom={props.marginBottom}
-      marginRight={props.marginRight}
-      marginLeft={props.marginLeft}
-      boxShadow={props.boxShadow}
-      transform={props.transform}
-      overflowX={props.overflowX}
-      nowrap={props.nowrap}
-      wordWrap={props.wordWrap}
-      marginTopPercent={props.marginTopPercent}
-      bottom={props.bottom}
-      heightPercent={props.heightPercent}
-      marginLeftPx={props.marginLeftPx}
+      borderStyle={borderStyle}
+      borderWidth={borderWidth}
+      borderColor={borderColor}
+      position={position}
+      top={top}
+      left={left}
+      right={right}
+      zIndex={zIndex}
+      pixelWidth={pixelWidth}
+      width={width}
+      maxWidth={maxWidth}
+      minHeight={minHeight}
+      height={height}
+      viewportHeight={viewportHeight}
+      direction={direction}
+      justify={justify}
+      align={align}
+      alignSelf={alignSelf}
+      wrap={wrap}
+      grow={grow}
+      backgroundColor={backgroundColor}
+      backgroundImage={backgroundImage}
+      backgroundPosition={backgroundPosition}
+      padding={padding}
+      paddingTop={paddingTop}
+      paddingLeft={paddingLeft}
+      paddingRight={paddingRight}
+      marginAuto={marginAuto}
+      marginTop={marginTop}
+      marginBottom={marginBottom}
+      marginRight={marginRight}
+      marginLeft={marginLeft}
+      boxShadow={boxShadow}
+      transform={transform}
+      overflowX={overflowX}
+      nowrap={nowrap}
+      wordWrap={wordWrap}
+      marginTopPercent={marginTopPercent}
+      bottom={bottom}
+      heightPercent={heightPercent}
+      marginLeftPx={marginLeftPx}
+      onClick={this._handleClick}
     >
-      {props.children}
+      {children}
     </StyledResponsiveWrapper>
   );
+  }
+  
 };
 
 const position = props => {

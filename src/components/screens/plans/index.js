@@ -1,7 +1,5 @@
 import React, { Component, Fragment } from "react";
 import ScrollableAnchor from "react-scrollable-anchor";
-import styled from "@emotion/styled";
-import { css } from "@emotion/core";
 
 // Constants ---------------------------------------
 import * as Colors from "../../../constants/Colors";
