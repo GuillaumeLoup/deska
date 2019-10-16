@@ -1,6 +1,5 @@
 
 .wrap-card{
-  position: relative;
   display: flex;
   position: relative;
   flex-direction:column;
@@ -36,4 +35,19 @@
 
 .navlink-but:hover{
   color: #8ea638;
+}
+
+
+
+/* media queries pour ipad */
+@media screen and (min-width : 768px) and (max-width : 1024px) {
+
+  .wrap-card{
+    width: 90%;
+}
+
+  .navlink{
+    height: 70%;
+  }
+
 }

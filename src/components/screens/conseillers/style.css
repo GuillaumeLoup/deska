@@ -1,0 +1,17 @@
+.aws-sld__bullets {
+  bottom: 10px;
+  z-index: 3;
+  margin-top: 10px;
+}
+.aws-sld__bullets button {
+    background: #8ea638;
+}
+
+.aws-sld__content {
+    background-color: white;
+}
+
+.advisor{
+  width: 50%;
+  padding-bottom: 70px;
+}

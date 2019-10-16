@@ -13,25 +13,18 @@ import Text from "../../ui/Text";
 
 class OneAdvisor extends Component {
   render() {
-    const { isMobile, isSmallScreen, card, click } = this.props;
+    const { isMobile, isSmallScreen, card} = this.props;
     return(
       <Fragment>
-        <SectionWrapper
-          minHeight={isMobile ? 60 : 40}
+        <ResponsiveWrapper
+          minHeight={isMobile ? 60 : isSmallScreen ? 40 : 40}
           width={100}
           direction="column"
           align="center"
+          marginRight={8}
         >
-          <Title
-            paddingBottom={5}
-            width={50}
-            font={{ weight: FontWeight.Bold, size: isMobile ? 2.8 : isSmallScreen ? 3 : 4}}
-            textColor={Colors.black}
-            center
-            padding={isMobile ? 8 : isSmallScreen ? 3 : 5}
-          >
-            
-          </Title>
+          
+          <NavLink className="navlink" card={card} to={`/advisor/${card.id}`}>
               <div
                 className="wrap-card"
               >
@@ -58,11 +51,9 @@ class OneAdvisor extends Component {
                   >
                     {card.consult}
                   </Text>
-                  <NavLink className="navlink" card={card} to={`/advisor/${card.id}`}>
-                  <button type="button" name={card.name} >afficher le conseiller</button>
-                  </NavLink>
                 </div>
-        </SectionWrapper>
+                </NavLink>
+        </ResponsiveWrapper>
       </Fragment>
     )
   }

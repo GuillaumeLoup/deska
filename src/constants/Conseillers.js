@@ -18,7 +18,7 @@ import note from "../assets/note.jpg"
     active: false,
     experience: "Camille a 6 ans d'experience dans le domaine du droit de la famille et son expérience en fait une experte reconnue",
     description: "Accueil paysan propose des espaces de vie et de rencontre, une agriculture paysanne pour une souveraineté alimentaire, un engagement solidaire pour un projet équitable, des pratiques respectueuses de l'environnement et de la diversité. Ces principes éthiques sont définis par cette charte, En France, le réseau est constitué d'antennes locales, constituées en associations départementales et/ou régionales, permettant d'accompagner et de promouvoir les paysans dans leur projet de diversification en lien avec l'accueil de public en milieu rural.", 
-    
+    langue: "français",
   },
     {
     id: 2,
@@ -31,6 +31,7 @@ import note from "../assets/note.jpg"
     active: false,
     experience: "Pierre a 6 ans d'experience dans le domaine du droit du travail et son expérience en fait un expert reconnu",
     description: "Accueil paysan propose des espaces de vie et de rencontre, une agriculture paysanne pour une souveraineté alimentaire, un engagement solidaire pour un projet équitable, des pratiques respectueuses de l'environnement et de la diversité. Ces principes éthiques sont définis par cette charte, En France, le réseau est constitué d'antennes locales, constituées en associations départementales et/ou régionales, permettant d'accompagner et de promouvoir les paysans dans leur projet de diversification en lien avec l'accueil de public en milieu rural.", 
+    langue: "français",
   },
   {
     id: 3,
@@ -43,6 +44,7 @@ import note from "../assets/note.jpg"
     active: true,
     experience: "Louis a 6 ans d'experience dans le domaine du droit informatique et son expérience en fait un expert reconnu",
     description: "Accueil paysan propose des espaces de vie et de rencontre, une agriculture paysanne pour une souveraineté alimentaire, un engagement solidaire pour un projet équitable, des pratiques respectueuses de l'environnement et de la diversité. Ces principes éthiques sont définis par cette charte, En France, le réseau est constitué d'antennes locales, constituées en associations départementales et/ou régionales, permettant d'accompagner et de promouvoir les paysans dans leur projet de diversification en lien avec l'accueil de public en milieu rural.", 
+    langue: "anglais",
   }
 ]
 

@@ -5,8 +5,9 @@ import ReactGA from "react-ga";
 import Navbar from "./components/screens/navbar";
 import NavbarMobile from "./components/screens/navbarMobile";
 import HomeGroup from "./components/screens/homegroup";
-
 import InterAdvisor from "./components/screens/interadvisor";
+import AllAdvisors from "./components/screens/alladvisors";
+
 import './App.css';
 
 
@@ -30,8 +31,10 @@ class App extends Component {
         {this.renderNavbar()}
         <Switch>
         <Route exact path="/" isMobile={isMobile} isSmallScreen={isSmallScreen} component={HomeGroup} />
-        <Route path="/advisor/:id" component={InterAdvisor} />
+        <Route path="/advisor/:id" isMobile={isMobile} isSmallScreen={isSmallScreen} component={InterAdvisor} />
+        <Route path="/advisors/" isMobile={isMobile} isSmallScreen={isSmallScreen} component={AllAdvisors} />
         </Switch>
+        
       </Fragment>
     );
   }
