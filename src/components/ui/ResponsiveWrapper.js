@@ -11,9 +11,10 @@ class ResponsiveWrapper extends Component  {
   render() {
  
   const {
-    borderStyle,
-    borderWidth,
+      borderStyle,
+      borderWidth,
       borderColor,
+      borderRadius,
       position,
       top,
       left,
@@ -59,6 +60,7 @@ class ResponsiveWrapper extends Component  {
       borderStyle={borderStyle}
       borderWidth={borderWidth}
       borderColor={borderColor}
+      borderRadius={borderRadius}
       position={position}
       top={top}
       left={left}
@@ -120,6 +122,16 @@ const borderStyle = props => {
   if (props.borderStyle != null) {
     return css`
       border-style: ${props.borderStyle};
+    `;
+  } else {
+    return null;
+  }
+};
+
+const borderRadius = props => {
+  if (props.borderRadius != null) {
+    return css`
+      border-radius: ${props.borderRadius}px;
     `;
   } else {
     return null;
@@ -526,6 +538,7 @@ const StyledResponsiveWrapper = styled("div")`
   ${borderWidth};
   ${borderColor};
   ${borderStyle};
+  ${borderRadius};
   ${top};
   ${left};
   ${bottom};

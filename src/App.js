@@ -8,8 +8,11 @@ import HomeGroup from "./components/screens/homegroup";
 import InterAdvisor from "./components/screens/interadvisor";
 import AllAdvisors from "./components/screens/alladvisors";
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {faGraduationCap, faCalendarAlt, faMapMarkerAlt, faGavel } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
 
+library.add(faGraduationCap, faCalendarAlt, faMapMarkerAlt, faGavel);
 
 class App extends Component {
   componentDidMount = () => {
