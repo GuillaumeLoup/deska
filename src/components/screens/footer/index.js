@@ -23,7 +23,7 @@ class Footer extends Component {
           align="center"
           paddingTop={10}
         >
-
+          
         </SectionWrapper>
       </Fragment>
     )
