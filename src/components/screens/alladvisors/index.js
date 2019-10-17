@@ -3,7 +3,7 @@ import Select from 'react-select';
 import './alladvisors.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from "@emotion/styled";
-import { css } from "@emotion/core";
+import { withMobileContext } from "../../../modules/MobileContext";
 
 // Constants ---------------------------------------
 import * as Colors from "../../../constants/Colors";
@@ -89,26 +89,28 @@ class AllAdvisors extends Component {
               direction="column"
             >
             <ResponsiveWrapper
-              direction="row"
-              height="100"
-              width={75}
+              direction={isMobile ? "column" : "row"}
+              height="150"
+              width={isMobile ? 100 : 75}
               alignSelf="center"
-              backgroundColor="#d4debb"
+              backgroundColor={Colors.lightGrey}
+              justify="center"
+              align="center"
             >
             <ResponsiveWrapper
               direction="column"
-              width={35}
+              width={isMobile ? 90 : 35}
               align="flex-end"
             >
               <Text
                 align="flex-start"
-                paddingLeft={25}
+                font={{ weight: FontWeight.Regular, size: 1.6}}
               >
                 Spécialité:
               </Text>
               
             <ResponsiveWrapper
-              width={75}
+              width={100}
             >
               
               <Select
@@ -123,17 +125,17 @@ class AllAdvisors extends Component {
       </ResponsiveWrapper>
       <ResponsiveWrapper
         direction="column"
-        width={35}
-        marginLeft={10}
+        width={isMobile ? 90 : 35}
+        marginTop={isMobile ? 10 : null}
       >
             <Text
-              
-              >
+              font={{ weight: FontWeight.Regular, size: 1.6}}
+            >
                 Langues:
               </Text>
               
             <ResponsiveWrapper
-              width={75}
+              width={100}
             >
               
               <Select
@@ -156,38 +158,43 @@ class AllAdvisors extends Component {
          width={75}
          alignSelf="center"
          borderRadius="4"
-         direction="row"
+         direction={isMobile ? "column" : "row"}
          borderWidth={1}
          borderStyle="solid"
          borderColor="rgb(212, 222, 187, 0.5)"
          marginTop={20}
          padding={1}
+         align={isMobile ? "center" : null}
        >
        <ResponsiveWrapper
-        width={10}
+       direction="column"
+        width={isMobile ? 100 : isSmallScreen ? 20 : 10}
         marginBottom={20}
+        align={isMobile ? "center" : null}
        >
         <img src={card.img} alt={card.name} style={{width: "100px", height: "100px", borderRadius: "80px"}} />
        </ResponsiveWrapper>
        <ResponsiveWrapper
-        width={50}
+        width={100}
         direction="column"
         padding={2}
+        align={isMobile ? "center" : null}
        >
          <Text
-          font={{ weight: FontWeight.Regular, size: isMobile ? 2.8 : isSmallScreen ? 2 : 1.6}}
+          font={{ weight: FontWeight.Regular, size: 1.6}}
          >
         {card.name}
          </Text>
          <ResponsiveWrapper
-          width={50}
+         direction="column"
+          width={isMobile ? 50 : 20}
          >
          <BorderStyled>
            {card.fonction}
          </BorderStyled>
          </ResponsiveWrapper>
          <Text
-          font={{ weight: FontWeight.Regular, size: isMobile ? 2.8 : isSmallScreen ? 2 : 1.6}}
+          font={{ weight: FontWeight.Regular, size: 1.6}}
           marginTop="10"
          >
            <FontAwesomeIcon
@@ -198,7 +205,7 @@ class AllAdvisors extends Component {
             {card.ville}
            </Text>
            <Text
-          font={{ weight: FontWeight.Regular, size: isMobile ? 2.8 : isSmallScreen ? 2 : 1.6}}
+          font={{ weight: FontWeight.Regular, size: 1.6}}
           marginTop="10"
          >
            <FontAwesomeIcon
@@ -209,7 +216,7 @@ class AllAdvisors extends Component {
             année de collégiature: {card.annee}
            </Text>
          <Text
-          font={{ weight: FontWeight.Regular, size: isMobile ? 2.8 : isSmallScreen ? 2 : 1.6}}
+          font={{ weight: FontWeight.Regular, size: 1.6}}
           marginTop="10"
          >
             <FontAwesomeIcon
@@ -221,7 +228,7 @@ class AllAdvisors extends Component {
            {card.numero}
            </Text>
            <Text
-          font={{ weight: FontWeight.Regular, size: isMobile ? 2.8 : isSmallScreen ? 2 : 1.6}}
+          font={{ weight: FontWeight.Regular, size: 1.6}}
           marginTop="10"
          >
             <FontAwesomeIcon
@@ -233,10 +240,12 @@ class AllAdvisors extends Component {
            </Text>
        </ResponsiveWrapper>
        <ResponsiveWrapper
-        width={20}
+        direction="column"
+        width={isMobile ? 100 : 20}
+        align={isMobile ? "center" : null}
        >
          <Text
-            font={{ weight: FontWeight.Regular, size: isMobile ? 2.8 : isSmallScreen ? 2 : 1.6}}
+            font={{ weight: FontWeight.Regular, size: 1.6}}
          >
           {card.consult}
          </Text>
@@ -244,8 +253,8 @@ class AllAdvisors extends Component {
        </ResponsiveWrapper>
        <ResponsiveWrapper
          direction="column"
-         width={20}
-         align="center"
+         width={isMobile ? 100 : 20}
+         align={isMobile ? "center" : null}
        >
          <img src={card.note} alt="note" style={{width: "100px", height: "30px"}} />
          <Button
@@ -278,4 +287,4 @@ const BorderStyled = styled("button")`
   margin-top: 10px;
 `;
 
-export default AllAdvisors;
+export default withMobileContext(AllAdvisors);
