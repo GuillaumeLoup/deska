@@ -1,9 +1,11 @@
 import React, { Component, Fragment } from "react";
+import { NavLink } from "react-router-dom";
 import Select from 'react-select';
 import './alladvisors.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from "@emotion/styled";
 import { withMobileContext } from "../../../modules/MobileContext";
+import GoToRoomInput from "../contact/GoToRoomInput";
 
 // Constants ---------------------------------------
 import * as Colors from "../../../constants/Colors";
@@ -62,7 +64,7 @@ class AllAdvisors extends Component {
       { value: 'chinois', label: 'Chinois' },
     ]
     const { selectedOption, selectedOption2 } = this.state;
-    const { isMobile, isSmallScreen } = this.props;
+    const { isMobile, isSmallScreen, history } = this.props;
     console.log(selectedOption);
     
     return(
@@ -257,11 +259,8 @@ class AllAdvisors extends Component {
          align={isMobile ? "center" : null}
        >
          <img src={card.note} alt="note" style={{width: "100px", height: "30px"}} />
-         <Button
-          marginTop={40}
-         >
-           Contacter
-         </Button>
+         <GoToRoomInput history={history} />
+
        </ResponsiveWrapper>
        </ResponsiveWrapper>
        )}

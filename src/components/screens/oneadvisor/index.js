@@ -2,11 +2,9 @@ import React, { Component, Fragment } from "react";
 import { NavLink } from 'react-router-dom';
 import '../conseillers/advisor.css';
 // Constants ---------------------------------------
-import * as Colors from "../../../constants/Colors";
 import * as FontWeight from "../../../constants/Fonts";
 
 // UI components -----------------------------------
-import SectionWrapper from "../../ui/Section";
 import Title from "../../ui/Title";
 import ResponsiveWrapper from "../../ui/ResponsiveWrapper";
 import Text from "../../ui/Text";

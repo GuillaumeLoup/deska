@@ -36,6 +36,7 @@ class Text extends Component {
       bottom,
       align,
       paddingLeft,
+      marginTopPercent,
     } = this.props;
     return (
       <TextStyled
@@ -65,6 +66,7 @@ class Text extends Component {
         backgroundColor={backgroundColor}
         align={align}
         paddingLeft={paddingLeft}
+        marginTopPercent={marginTopPercent}
       >
         {children}
       </TextStyled>
@@ -312,6 +314,17 @@ const marginTop = props => {
     : null;
 };
 
+const marginTopPercent = props => {
+  const { marginTopPercent } = props;
+  if (marginTopPercent == null || !marginTopPercent) return null;
+
+  return marginTopPercent
+    ? css`
+        margin-top: ${props.marginTopPercent}%;
+      `
+    : null;
+};
+
 const marginBottom = props => {
   const { marginBottom } = props;
   if (marginBottom == null || !marginBottom) return null;
@@ -360,6 +373,7 @@ const TextStyled = styled("p")`
   ${bottom};
   ${align};
   ${paddingLeft};
+  ${marginTopPercent};
   vertical-align: middle;
 `;
 

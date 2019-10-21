@@ -7,12 +7,15 @@ import NavbarMobile from "./components/screens/navbarMobile";
 import HomeGroup from "./components/screens/homegroup";
 import InterAdvisor from "./components/screens/interadvisor";
 import AllAdvisors from "./components/screens/alladvisors";
+import Footer from "./components/screens/footer";
+import Video from "./components/screens/contact/Video";
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {faGraduationCap, faCalendarAlt, faMapMarkerAlt, faGavel } from '@fortawesome/free-solid-svg-icons';
+import { faTwitter } from  "@fortawesome/free-brands-svg-icons";
 import './App.css';
 
-library.add(faGraduationCap, faCalendarAlt, faMapMarkerAlt, faGavel);
+library.add(faGraduationCap, faCalendarAlt, faMapMarkerAlt, faGavel, faTwitter);
 
 class App extends Component {
   componentDidMount = () => {
@@ -28,16 +31,17 @@ class App extends Component {
     return <Navbar />;
   };
   render() {
-    const { isMobile, isSmallScreen } = this.props;
+    const { isMobile, isSmallScreen, history } = this.props;
     return (
       <Fragment>
         {this.renderNavbar()}
         <Switch>
         <Route exact path="/" isMobile={isMobile} isSmallScreen={isSmallScreen} component={HomeGroup} />
         <Route path="/advisor/:id" isMobile={isMobile} isSmallScreen={isSmallScreen} component={InterAdvisor} />
-        <Route path="/advisors/" isMobile={isMobile} isSmallScreen={isSmallScreen} component={AllAdvisors} />
+        <Route path="/advisors" isMobile={isMobile} isSmallScreen={isSmallScreen} component={AllAdvisors} />
+        <Route path="/:roomId" history={history} exact component={Video}/>
         </Switch>
-        
+        <Footer isMobile={isMobile} isSmallScreen={isSmallScreen} />
       </Fragment>
     );
   }

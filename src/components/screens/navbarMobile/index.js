@@ -24,7 +24,7 @@ class NavbarMobile extends Component {
     slide: 0,
     lastScrollY: 0,
     windowHeight: 0,
-    switchNavbarColors: "transparent",
+    switchNavbarColors: "white",
     navIsOpen: false,
     goTopisVisible: false
   };
@@ -87,8 +87,7 @@ class NavbarMobile extends Component {
               href="#accueil"
               center
               position="relative"
-              font={{ size: 1.8}}
-              
+              font={{ size: 1.8, weight: FontWeight.Bold }}
               handleClick={this.toggleNav}
               top={40}
             >
@@ -99,19 +98,21 @@ class NavbarMobile extends Component {
           <ResponsiveWrapper
             width={100}
             minHeight={20}
-            backgroundColor={Colors.white}
+            backgroundColor={Colors.darkGrey}
             direction="column"
             justify="space-evenly"
-            align="flex-start"
+            align="center"
             zIndex={12}
-            paddingLeft={40}
-            marginTop="50"
+            
+            marginTop="25"
           >
             <Link
               href="#accueil"
               font={{ size: 2}}
               width={50}
               handleClick={this.toggleNav}
+              textColor={Colors.white}
+              center
             >
               Accueil
             </Link>
@@ -120,6 +121,8 @@ class NavbarMobile extends Component {
               font={{ size: 2}}
               width={50}
               handleClick={this.toggleNav}
+              textColor={Colors.white}
+              center
             >
               Plans et prix
             </Link>
@@ -128,6 +131,8 @@ class NavbarMobile extends Component {
               font={{ size: 2}}
               width={50}
               handleClick={this.toggleNav}
+              textColor={Colors.white}
+              center
             >
               Contact
             </Link>
@@ -215,7 +220,7 @@ class NavbarMobile extends Component {
           width={100}
           minHeight={60}
           align="center"
-          backgroundColor={switchNavbarColors}
+          backgroundColor={Colors.white}
           position="fixed"
           zIndex={10}
           padding={1}
