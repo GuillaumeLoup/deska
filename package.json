@@ -10,6 +10,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.7",
     "express": "^4.17.1",
+    "getusermedia": "^2.0.1",
     "node-sass": "^4.12.0",
     "react": "^16.10.2",
     "react-awesome-slider": "^2.0.0",

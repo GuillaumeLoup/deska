@@ -12,7 +12,6 @@ import MobileAdvisor from "../conseillers/MobileAdvisor";
 class HomeGroup extends Component {
   render() {
     const { isMobile, isSmallScreen } = this.props;
-    console.log(isMobile)
     return(
       <div>
       <Home isMobile={isMobile} isSmallScreen={isSmallScreen} />

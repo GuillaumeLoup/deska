@@ -259,7 +259,7 @@ class AllAdvisors extends Component {
          align={isMobile ? "center" : null}
        >
          <img src={card.note} alt="note" style={{width: "100px", height: "30px"}} />
-         <GoToRoomInput history={history} />
+         <GoToRoomInput history={history} id={card.id} />
 
        </ResponsiveWrapper>
        </ResponsiveWrapper>

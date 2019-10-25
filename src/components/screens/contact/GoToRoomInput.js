@@ -6,16 +6,16 @@ const goToRoom = (history, roomId) => {
 }
 
 
-export default function GoToRoomInput({history}) {
-  let [roomId, setRoomId] = useState(shortId.generate());
-console.log(history)
+export default function GoToRoomInput({history, id}) {
+  let [roomId, setRoomId] = useState("");
+console.log(roomId)
   return (<div className="enter-room-container">
     <form>
-          <input type="text" value={roomId} placeholder="Room id" onChange={(event) => {
+          <input type="text" value={id} placeholder="Room id" onChange={(event) => {
             setRoomId(event.target.value)
           }}/>
           <button onClick={() => {
-            goToRoom(history, roomId)
+            goToRoom(history, id)
           }}>Enter</button>
           </form>
         </div>)
