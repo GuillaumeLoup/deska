@@ -23,7 +23,7 @@ class App extends Component {
   };
   initializeReactGA = () => {
     ReactGA.initialize("UA-120801966-2");
-    ReactGA.pageview("/");
+    
   };
   renderNavbar = () => {
     const { isSmallScreen, isMobile } = this.props;

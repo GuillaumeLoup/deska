@@ -3,7 +3,7 @@ import React, { Component, Fragment } from "react";
 import styled from "@emotion/styled";
 import { css } from "@emotion/core";
 import { configureAnchors } from "react-scrollable-anchor";
-import { goToAnchor } from "react-scrollable-anchor";
+import { NavLink } from 'react-router-dom';
 
 // UI components -----------------------------------
 import Text from "../../ui/Text";
@@ -39,7 +39,6 @@ class Navbar extends Component {
   }
 
   render() {
-    const { slide, lastScrollY } = this.state;
     return (
       <Fragment>
         <NavbarStyled
@@ -48,9 +47,7 @@ class Navbar extends Component {
           align="center"
           position="fixed"
           zIndex={10}
-          slide={slide}
           backgroundColor={Colors.white}
-          lastScrollY={lastScrollY}
         >
           {" "}
           <ResponsiveWrapper
@@ -76,6 +73,7 @@ class Navbar extends Component {
             align="flex-start"
             paddingRight={13}
           >
+            <NavLink to='/#accueil'>
             <Link
               href="#accueil"
               width={20}
@@ -86,6 +84,8 @@ class Navbar extends Component {
             >
               Accueil
             </Link>
+            </NavLink>
+            <NavLink to='/#prix'>
              <Link
               href="#prix"
               width={20}
@@ -95,6 +95,8 @@ class Navbar extends Component {
             >
               Plans et prix
             </Link>
+            </NavLink>
+            <NavLink to='/#contact'>
             <Link
               href="#contact"
               width={20}
@@ -104,6 +106,7 @@ class Navbar extends Component {
             >
               Contact
             </Link>
+            </NavLink>
           </ResponsiveWrapper>
           
         </NavbarStyled>
