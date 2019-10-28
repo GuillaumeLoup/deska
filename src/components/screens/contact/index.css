@@ -1,0 +1,17 @@
+.button-contact{
+  min-width: 120px;
+  min-height: 20px;
+  padding: 5px 5px;
+  border-radius: 20px;
+  background-color: #8ea638;
+  color: white;
+  cursor: pointer;
+ 
+  transition: all 0.2s ease;
+  margin-bottom : 0px;
+}
+
+.button-contact:hover {
+    color: #8ea638;
+    background-color: #e6e6e6;
+  }

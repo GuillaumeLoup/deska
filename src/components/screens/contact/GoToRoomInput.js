@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import shortId from 'shortid';
+import './index.css';
 
 const goToRoom = (history, roomId) => {
   history.push(`/${roomId}`)
@@ -11,12 +11,12 @@ export default function GoToRoomInput({history, id}) {
 console.log(roomId)
   return (<div className="enter-room-container">
     <form>
-          <input type="text" value={id} placeholder="Room id" onChange={(event) => {
+          {/* <input type="text" value={id} placeholder="Room id" onChange={(event) => {
             setRoomId(event.target.value)
-          }}/>
-          <button onClick={() => {
+          }}/> */}
+          <button className="button-contact" onClick={() => {
             goToRoom(history, id)
-          }}>Enter</button>
+          }}>Contacter ce conseiller</button>
           </form>
         </div>)
 }

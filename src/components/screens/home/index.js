@@ -23,7 +23,7 @@ class Home extends Component {
   render() {
     const {isMobile, isSmallScreen } = this.props;
     return(
-        <ScrollableAnchor id="accueil">
+        <div id="accueil">
       <div>
         <SectionWrapper
           minHeight={isMobile ? 50 : isSmallScreen ? 60 : 100}
@@ -99,7 +99,7 @@ class Home extends Component {
           
         </SectionWrapper>
       </div>
-    </ScrollableAnchor>
+    </div>
     )
   }
 }
